@@ -24,4 +24,23 @@ public class Node{
         return false;
     }
     ////////////////////////////////////////////////////////////
+
+    //COUNT LENGTH OF TREE//////////////////////////////////////
+    public static int height(Node root) {
+        if (root == null || (root.left == null && root.right == null)) return 0;
+        return babyHeight(root) - 1;
+    }
+    public static int babyHeight(Node root) {
+        if (root == null) return 0;
+
+        int leftHeight = 0;
+        int rightHeight = 0;
+
+        if (root.left != null) leftHeight = babyHeight(root.left);
+        if (root.right != null) rightHeight = babyHeight(root.right);
+
+        if (leftHeight > rightHeight) return leftHeight + 1;
+        else return rightHeight + 1;
+    }
+    ////////////////////////////////////////////////////////////
 }
