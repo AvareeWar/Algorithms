@@ -1,6 +1,4 @@
-package com.company.Queues;
-
-import javafx.scene.Node;
+package com.company.Data_Structures.Queues;
 
 public class Queue {
 

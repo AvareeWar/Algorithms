@@ -1,4 +1,4 @@
-package com.company.Stacks;
+package com.company.Data_Structures.Stacks;
 
 public class Stack {
     public class Node{
@@ -8,7 +8,7 @@ public class Stack {
             this.data = data;
         }
     }
-    
+
     Node top;
 
     boolean isEmpty(){

@@ -1,6 +1,5 @@
-package com.company.ArrayLists;
+package com.company.Data_Structures.ArrayLists;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Arrays {

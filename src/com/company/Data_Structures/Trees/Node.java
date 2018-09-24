@@ -1,4 +1,4 @@
-package com.company.Trees;
+package com.company.Data_Structures.Trees;
 
 
 public class Node{
