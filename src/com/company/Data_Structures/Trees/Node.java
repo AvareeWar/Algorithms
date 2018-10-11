@@ -1,6 +1,8 @@
 package com.company.Data_Structures.Trees;
 
 
+import javax.swing.tree.TreeNode;
+
 public class Node{
 
     Node left, right;
@@ -8,6 +10,10 @@ public class Node{
 
     public Node(int data){
         this.data = data;
+    }
+
+    public static void visit(Node node){
+        System.out.println(node);
     }
 
     //CHECK BST ALG/////////////////////////////////////////////
@@ -26,21 +32,60 @@ public class Node{
     ////////////////////////////////////////////////////////////
 
     //COUNT LENGTH OF TREE//////////////////////////////////////
-    public static int height(Node root) {
-        if (root == null || (root.left == null && root.right == null)) return 0;
-        return babyHeight(root) - 1;
-    }
-    public static int babyHeight(Node root) {
-        if (root == null) return 0;
+    public int maxDepth(Node root) {
 
-        int leftHeight = 0;
-        int rightHeight = 0;
+        int leftheight = 0;
+        int rightheight = 0;
 
-        if (root.left != null) leftHeight = babyHeight(root.left);
-        if (root.right != null) rightHeight = babyHeight(root.right);
+        if(root == null){
+            return 0;
+        }
 
-        if (leftHeight > rightHeight) return leftHeight + 1;
-        else return rightHeight + 1;
+        if(root.left != null) leftheight = maxDepth(root.left);
+
+
+        if(root.right != null) rightheight = maxDepth(root.right);
+
+
+        if(leftheight > rightheight) return leftheight += 1;
+        else{
+            return rightheight += 1;
+        }
+
+
     }
     ////////////////////////////////////////////////////////////
+
+    //IN-ORDER TRAVERSAL////////////////////////////////////////
+    public static void inOrderTraversal(Node node){
+        //in order traversal means to visit the left branch, then the current node, and finally the right.
+        if(node != null){
+            inOrderTraversal(node.left);
+            visit(node);
+            inOrderTraversal(node.right);
+        }
+    }
+    ////////////////////////////////////////////////////////////
+
+    //PRE-ORDER TRAVERSAL///////////////////////////////////////
+    public static void preOrderTraversal(Node node){
+        //pre order traversal visits the current node before its child nodes
+        if(node != null){
+            visit(node);
+            preOrderTraversal(node.left);
+            preOrderTraversal(node.right);
+        }
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    //POST-ORDER TRAVERSAL///////////////////////////////////////
+    public static void postOrderTraversal(Node node){
+        //pre order traversal visits the current node before its child nodes
+        if(node != null){
+            postOrderTraversal(node.left);
+            postOrderTraversal(node.right);
+            visit(node);
+        }
+    }
 }
