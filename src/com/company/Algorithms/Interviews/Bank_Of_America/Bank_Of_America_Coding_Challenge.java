@@ -1,9 +1,8 @@
-package com.company.Algorithms.Random;
+package com.company.Algorithms.Interviews.Bank_Of_America;
 
 import org.junit.Test;
 
-public class MergeSort {
-
+public class Bank_Of_America_Coding_Challenge {
 
     public int[] mergeArray(int[] a, int[] b){
 

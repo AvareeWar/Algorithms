@@ -1,4 +1,4 @@
-package com.company.Algorithms.Random;
+package com.company.Algorithms.Practice;
 
 import org.junit.Test;
 

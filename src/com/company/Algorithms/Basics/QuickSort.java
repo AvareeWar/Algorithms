@@ -1,11 +1,11 @@
-package com.company.Algorithms.Random;
+package com.company.Algorithms.Basics;
 
 import org.junit.Test;
 
 public class QuickSort {
 
 
-
+    //NOT COMPLETED-----------------------------------
 
     public int[] quicksort(int[] array){
 
