@@ -1,0 +1,127 @@
+Basics
+    Java is a pass by reference language.
+
+        Protected - Can be seen by subclasses and inherited outside of package but not altered.
+
+        Final - classes cannot be subclassed, methods cannot be overridden(this method is a superclass), final methods can override.
+
+        Public - All other classes can see it and modify.
+
+        Private - the only class that can see it is the one that declared it.
+
+        Static - Static classes and methods can refer to other static classes and methods. They cannot refer to instance members but instance members can refer to them through an object reference..
+
+    OOP
+        Interface class- Hosts the signatures of the methods, which implies that the methods do not have a body. The interface can't do anything. It's just a pattern of getters and setters. Little CPU to use.
+
+        Abstract class - They are more expensive to use, because there is a lookup to do when you inherit from them. These classes use more CPU when called because the classes have behaviours assigned to them.
+
+	    Polymorphism - Means that an object in java can have many shapes and objectives with those shapes. Polymorphism in Java has two types:
+
+            Compile time polymorphism (static binding) - static polymorphism is achieved through method overloading. Method overloading means there are several methods present in a class having the same name but different types/order/number of parameters.
+
+            Runtime polymorphism (dynamic binding) - dynamic polymorphism is achieved through method overriding. Overriding means to override the functionality of an existing method.
+
+            Method overloading is an example of static polymorphism, while method overriding is an example of dynamic polymorphism.
+
+
+     Design Patterns
+
+        Behavioral -.used in communication between entities and makes it easier for them to communicate.
+
+            Strategy Pattern - The strategy pattern is a behavioral design pattern that allows you to decide which course of action a program should take, based on a specific context during runtime. You encapsulate two different algorithms inside two classes, and decide at runtime which strategy you want to go with.
+
+        Structural - builds relationships between entities to make them more accessible to each other.
+
+            Adapter Pattern - The adapter pattern is a structural design pattern that allows you to repurpose a class with a different interface, allowing it to be used by a system which uses different calling methods.
+
+            Decorator Pattern  - The decorator pattern is a structural design pattern which enables us to add new or additional behavior to an object during runtime, depending on the situation.
+
+        Creational - builds instantiation mechanisms to fit the situation at hand
+
+            Factory Pattern - The factory method pattern is a creational design pattern which does exactly as it sounds: it's a class that acts as a factory of object instances.
+
+            Singleton Pattern - The singleton design pattern is a creational design pattern which makes sure that you have one single instance of a particular class in the duration of your runtime, and provides a global point of access to the single instance.
+
+        Collections
+            Lists - list collection stores elements by insertion order and doesn’t need pointers for each index.
+
+            Sets - The Set interface contains only methods inherited from Collection and adds the restriction that duplicate elements are prohibited.
+
+            Maps - Map cannot contain duplicate keys and each key can map to at most one value. Order of a map depends on specific implementations, e.g TreeMap and LinkedHashMap have predictable order, while HashMap does not.
+
+            Tables - A table may be sparse, with only a small fraction of row key / column key pairs possessing a corresponding value.
+
+            Linked Lists - Unlike arrays, linked list elements are not stored at contiguous location; the elements are linked using pointers. Components include data for each node, head and pointer reference.
+
+
+
+
+
+
+
+Questions:
+
+	When asked about scalability:
+        Understand that scalability is relative to performance, so the smaller performance your project takes up, the better. Breaking you project or function into smaller modules means that eventually it can be passed onto and adapt in another operating system with ease.
+
+	When asked about principles of Software Engineering:
+        Good practice.
+        Knowing the basics of fundamental concepts.
+        Always be studying and adapting to new technology.
+
+	When asked about checking code:
+        Know that testing is always the best thing you can do with your code in a professional environment. Set black box tests to generalize the passings of values seen and try to accomodate the needs of the program is it is failing.
+
+
+	When asked about projects that I’ve done:
+        STAR:
+            S: I needed to facilitate the need for a 20,000 client sensitive document transfer. I was ready to use STS, and Selenium(Java/JS).
+
+            T: I had to get read access and security clearance from higher ups in the company to be able to set boundaries and tests before execution.
+
+            A: I collaborated with some senior developers who helped me connect to the API server. After this I was able to write a pull executable that pulled documents based on client ID into a shared temporary repository and then used Selenium to autonomously find the document path, save that path to an excel doc with the clients corresponding ID and then use a google webdriver to load each document into client profiles on a new Workday system being used by business analysts.
+
+            R: In the end I had a working product that ran autonomously with tests and documentation for every step of the way that ran for 3 weeks straight.
+
+
+    BASIC SYSTEMS THREADING, RELATIONAL DATABASES, AND INTERVIEW QUESTIONS:
+        Diff between process and thread
+            A thread is a subset of a process and refers to objects. A thread is lightweight where a process is a heavyweight in terms of performance. A process can be stored in main memory where a thread is executed at the time of the program.
+
+        Synchronization- how does it work
+            The blocking of threads on simultaneous methods. Doesn’t allow methods to work at the same time.
+
+        How do you create a deadlock
+            By creating states in each thread that allow for one thread to activate before another.
+
+        Difference between placing synchronization on a block or on a method
+            A thread only executes on a synchronized method and when there are many methods that are synchronized there will be block if they are in the same class.
+
+        Difference between placing synchronization method or static method - there is a specific difference
+            Essentially there is no real difference but when a thread comes to a synchronized block of code it has to wait until there are no other executing threads threads on that method.
+
+        Why/how would you create a deadlock?
+            To make sure that only threads you want running at a specific time run without conflictions of other threads.
+
+        Difference between MySQL and MongoDB
+            SQL has a complex data house of specific tables of information where MongoDB is a parsing data house for JSON files. SQL is more specific to acquiring information.
+
+        What is SPI in agile?
+            Software Process Improvement - basically sets the standard for product reevaluation during agile development.
+
+        How hash works - very common question
+            Converting data into a number sequence that can become decoded later when called upon.
+
+        Difference between list and map
+            A list is a collection of data where each item is indexed in incremental order and a map is a collection of data where each item has a key value pair in which each key cannot be a duplicate of another.
+
+
+    QUESTIONS FOR INTERVIEWER:
+        What is the company culture like?
+
+        Does the company offer customization on employees Operating Systems? (Linux, Windows, Mac)
+
+        What does a Software Engineer do there on a daily basis?
+
+        How is work delegated to new hires?
